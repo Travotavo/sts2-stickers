@@ -1,5 +1,5 @@
 # Sticker the Spire
-A Sticker Mod for Slay the Spire 2!
+A Sticker Mod for Slay the Spire 2! Requires BaseLib
 
 https://github.com/user-attachments/assets/e0f25fb7-9ede-4acd-aac2-93c469d13fa0
 
