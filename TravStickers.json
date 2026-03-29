@@ -1,9 +1,9 @@
 {
   "id": "TravStickers",
-  "name": "Trav's Stickers",
+  "name": "Sticker the Spire",
   "author": "Travotavo",
   "description": "Stickers for Slay the Spire 2!",
-  "version": "v0.0.0",
+  "version": "v1.0.0",
   "has_pck": true,
   "has_dll": true,
   "dependencies": ["BaseLib"],
