@@ -11,7 +11,7 @@ using TravStickers.TravStickersCode;
 
 public partial class sticker_placement_node : NClickableControl
 {
-	private TextureRect _fakeSticker;
+	private Sprite2D _fakeSticker;
 	public StickerUi parent;
 	private PlacedSticker _stickerStats;
 	
@@ -41,6 +41,19 @@ public partial class sticker_placement_node : NClickableControl
 				_fakeSticker.Scale = _fakeSticker.Scale.Clamp(new  Vector2(0.025f,0.025f),new  Vector2(0.175f,0.175f));
 			}
 		}
+
+		if (@event is InputEventKey)
+		{
+			InputEventKey emb = (InputEventKey) @event;
+			if (emb.Keycode == Key.E)
+			{
+				_fakeSticker.Rotation += 0.05f;
+			}
+			if (emb.Keycode == Key.Q)
+			{
+				_fakeSticker.Rotation -= 0.05f;
+			}
+		}
 	}
 
 	public override void _Process(double delta)
@@ -52,21 +65,21 @@ public partial class sticker_placement_node : NClickableControl
 			if (_fakeSticker == null)
 			{
 				Logger.Info("Drawing Fake Sticker");
-				TextureRect texture_rect = new TextureRect();
+				Sprite2D texture_rect = new Sprite2D();
 				var texture = ResourceLoader.Load<Texture2D>("res://" + MainFile.ModId + "/images/stickers/" + parent._activeSticker.StickerID + ".png");
 				texture_rect.Texture = texture;
 				_stickerStats = new PlacedSticker(parent._activeSticker.StickerID,0,new Vector2(),0.1f);
-				texture_rect.PivotOffset = new Vector2(texture.GetWidth()/2,texture.GetHeight()/2);
+				//texture_rect.PivotOffset = new Vector2(texture.GetWidth()/2,texture.GetHeight()/2);
 				texture_rect.Scale = new Vector2(_stickerStats.scale,_stickerStats.scale);
-				texture_rect.MouseFilter = MouseFilterEnum.Ignore;
 				_fakeSticker = texture_rect;
 				_fakeSticker.Modulate = new Color(1, 1, 1, 0.5f);
-				
 				AddChild(texture_rect);
 			}
 			else
 			{
-				_fakeSticker.GlobalPosition = GetGlobalMousePosition() - (_fakeSticker.PivotOffset) * _fakeSticker.Scale;
+				//_fakeSticker.GlobalPosition = GetGlobalMousePosition() - (_fakeSticker.PivotOffset) * _fakeSticker.Scale;
+				
+				_fakeSticker.GlobalPosition = GetGlobalMousePosition();
 			}
 		}
 		else

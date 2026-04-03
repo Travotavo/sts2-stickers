@@ -71,14 +71,14 @@ public partial class NStickerLayer : TextureRect, IPoolable
         var AttachedStickers = PlacedSticker.StickerDB[Card_ID];
         foreach (var sticker in AttachedStickers)
         {
-            var instance = new TextureRect();
+            var instance = new Sprite2D();
             instance.Texture = ResourceLoader.Load<Texture2D>("res://" + MainFile.ModId + "/images/stickers/" + sticker.ID + ".png");
-            instance.PivotOffset = new Vector2(instance.Texture.GetWidth()/2,instance.Texture.GetHeight()/2);
+            //instance.PivotOffset = new Vector2(instance.Texture.GetWidth()/2,instance.Texture.GetHeight()/2);
             instance.Scale = new Vector2(sticker.scale,sticker.scale);
             instance.Rotation = sticker.rotation;
             instance.Position = sticker.position;
-            instance.StretchMode = StretchModeEnum.Keep;
-            instance.MouseFilter = MouseFilterEnum.Ignore;
+            //instance.StretchMode = StretchModeEnum.Keep;
+            //instance.MouseFilter = MouseFilterEnum.Ignore;
             
             Logger.Info($"Drawing Sticker {sticker.ID}");
             AddChild(instance);

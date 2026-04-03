@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://4luf2l2gsoa6"]
+[gd_scene load_steps=10 format=3 uid="uid://4luf2l2gsoa6"]
 
 [ext_resource type="Script" uid="uid://cgd0o3wakwcrh" path="res://TravStickersCode/ui/StickerUi.cs" id="1_w27hd"]
 [ext_resource type="Texture2D" uid="uid://3yh26ye2kc01" path="res://TravStickers/images/ui/trash_icon.png" id="2_31oj7"]
 [ext_resource type="Script" uid="uid://cdl3ys1dygj0p" path="res://TravStickersCode/ui/sticker_placement_node.cs" id="2_y1avu"]
 [ext_resource type="Script" uid="uid://jiasds6gg0xw" path="res://TravStickersCode/ui/OpenEditorButton.cs" id="3_vcuq3"]
+[ext_resource type="Texture2D" uid="uid://bjqjqddw5h86o" path="res://TravStickers/images/ui/RotateDemo.png" id="5_nqtl6"]
+[ext_resource type="Texture2D" uid="uid://bkd6wax1ghvna" path="res://TravStickers/images/ui/ScrollDemo.png" id="6_au7wq"]
 
 [sub_resource type="Animation" id="Animation_y1avu"]
 length = 0.001
@@ -209,3 +211,13 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="RotateDemo" type="Sprite2D" parent="."]
+position = Vector2(527.99994, 880)
+scale = Vector2(0.19174758, 0.19174755)
+texture = ExtResource("5_nqtl6")
+
+[node name="ScrollDemo" type="Sprite2D" parent="."]
+position = Vector2(783.74756, 875)
+scale = Vector2(0.25667477, 0.2566747)
+texture = ExtResource("6_au7wq")
