@@ -11,7 +11,6 @@ https://github.com/user-attachments/assets/e0f25fb7-9ede-4acd-aac2-93c469d13fa0
 - Easy support for mods to introduce more stickers.
 - Sticker Order in place of current alphabetic sort.
 - Avoid crashes for depreciated sticker names.
-- In-game instructions for placing stickers.
 - UI/UX design.
 - Stickers for Act 2 and 3 Bosses.
 - Rendering Ceremonial Beast sticker.
